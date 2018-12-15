@@ -1,16 +1,10 @@
 <p>
   slider works!w
 </p>
-<div id="container" style="width:400px">  
-  <div
-    ng2-carouselamos
-    class="slides-wrapper"
-    [items]="items"
-    [width]="300"
-    [$prev]="prev"
-    [$next]="next"
-    [$item]="item"
-  >
+
+<button (onmouseover)="showHover($event)">test for hover </button>
+<div id="container" style="width:400px">
+  <div ng2-carouselamos class="slides-wrapper" [items]="items" [width]="300" [$prev]="prev" [$next]="next" [$item]="item">
   </div>
   <ng-template #prev>
     <img src="assets/images/left-arrow.png" id="left" />
@@ -20,10 +14,23 @@
   </ng-template>
   <ng-template #item let-item let-i="index">
 
-      <div class="items">
-        <div> 
-          {{ item.name }}
-        </div>
+    <div class="items">
+      <div>
+        {{ item.name }}
       </div>
-
+    </div>
   </ng-template>
+  <owl-carousel [options]="{items: 3, dots: true, navigation: false}" [items]="items" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let image of items;let i = index">
+      <div class="thumbnail-image">
+        {{image.name}}</div>
+    </div>
+  </owl-carousel>
+  <div>
+    <h1>All Categoies</h1>
+    <ul>
+    <li>
+      test first you get them 
+    </li>
+    </ul>
+  </div>

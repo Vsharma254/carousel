@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { SliderComponent } from './slider/slider.component';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SliderComponent } from './slider/slider.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent],

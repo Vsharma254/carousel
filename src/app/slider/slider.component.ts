@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  items: Array<any> = []
+  items: Array<any> = [];
 
   constructor() {
     this.items = [
@@ -26,6 +26,9 @@ export class SliderComponent implements OnInit {
     ]
   }
 
+  showHover(event:any){
+    
+  }
   ngOnInit() {
     
   }
